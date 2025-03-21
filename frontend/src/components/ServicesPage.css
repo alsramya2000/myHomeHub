@@ -1,0 +1,88 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: url("../../public/background.jpg") no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* ✅ Navbar at the top */
+.navbar {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding: 15px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 60px;
+    z-index: 100;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* ✅ Ensure content starts below the navbar */
+.services-container {
+    padding-top: 300px; /* ✅ Push content below the navbar */
+    text-align: center;
+}
+
+/* ✅ Services Overview Section */
+.services-overview {
+    text-align: center;
+    padding: 40px 20px;
+    color: white;
+    background: rgba(0, 0, 0, 0.6);
+    margin: 20px auto;
+    width: 80%;
+    border-radius: 15px;
+}
+
+.services-overview h1 {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.services-overview p {
+    font-size: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* ✅ Services Features Section */
+.services-features {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 50px;
+}
+
+/* ✅ Individual Service Card */
+.service-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    width: 400px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.service-card img {
+    width: 100%;
+    height: auto;
+}
+
+.service-text {
+    padding: 20px;
+}
+
+.service-text h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.service-text p {
+    font-size: 16px;
+    color: #333;
+}
