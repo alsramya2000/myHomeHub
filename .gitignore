@@ -1,0 +1,32 @@
+# 📌 **Node.js (React Frontend)**
+node_modules/
+package-lock.json
+yarn.lock
+build/
+dist/
+.npm/
+
+# 📌 **Python (Flask Backend)**
+__pycache__/
+venv/
+*.pyc
+*.pyo
+*.log
+.env
+
+# 📌 **Terraform (AWS Deployment)**
+.terraform/
+terraform.tfstate
+terraform.tfstate.backup
+*.tfvars
+*.plan
+
+#  **System Files**
+.DS_Store
+Thumbs.db
+
+# **IDE & Editor Settings**
+.vscode/
+.idea/
+*.swp
+*.sublime-workspace

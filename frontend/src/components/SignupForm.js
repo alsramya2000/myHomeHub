@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom"; // Import Link for navigation
 
 const SignupForm = () => {
     const [formData, setFormData] = useState({
@@ -12,7 +13,7 @@ const SignupForm = () => {
         cameraDeviceId: "",
     });
 
-    const [customerId, setCustomerId] = useState(null);  
+    const [customerId, setCustomerId] = useState(null);
 
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -32,7 +33,7 @@ const SignupForm = () => {
             }
 
             const result = await response.json();
-            setCustomerId(result.customerId);  // ✅ Store customer ID after signup
+            setCustomerId(result.customerId);
             alert(`Signup successful! Your Customer ID: ${result.customerId}`);
         } catch (error) {
             console.error("Error submitting form:", error);
@@ -55,12 +56,17 @@ const SignupForm = () => {
                 <button type="submit">Sign Up</button>
             </form>
 
-            {customerId && (  // ✅ Show Customer ID after signup
+            {customerId && (
                 <div className="customer-id">
                     <h3>Signup Successful!</h3>
                     <p>Your Customer ID: <strong>{customerId}</strong></p>
                 </div>
             )}
+
+            {/*  Login Link */}
+            <p className="login-link">
+                Already a user? <Link to="/login">Login here</Link>
+            </p>
         </div>
     );
 };
